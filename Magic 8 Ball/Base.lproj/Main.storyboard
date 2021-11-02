@@ -16,39 +16,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Galaxy Purple" translatesAutoresizingMaskIntoConstraints="NO" id="Xpv-FP-pC7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Galaxy Purple" translatesAutoresizingMaskIntoConstraints="NO" id="Xpv-FP-pC7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SG4-gN-z19">
-                                <rect key="frame" x="155" y="709" width="105" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Ask">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
-                                    <color key="baseForegroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7e-5E-GVK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask and you shall know..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-X3-es6">
-                                <rect key="frame" x="79" y="92" width="257" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-5c-EeW">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JU5-uD-mY0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="831.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7G-Zb-YRa" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="276.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask and you shall know..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-X3-es6">
+                                                <rect key="frame" x="22.5" y="10" width="369" height="256.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Mll-X3-es6" firstAttribute="centerY" secondItem="E7G-Zb-YRa" secondAttribute="centerY" id="8kC-VY-Doj"/>
+                                            <constraint firstItem="Mll-X3-es6" firstAttribute="centerX" secondItem="E7G-Zb-YRa" secondAttribute="centerX" id="BDb-ZP-S01"/>
+                                            <constraint firstItem="Mll-X3-es6" firstAttribute="top" secondItem="E7G-Zb-YRa" secondAttribute="top" constant="10" id="M1i-Wn-0GY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-wo-pzz" userLabel="MiddleView">
+                                        <rect key="frame" x="51.5" y="277.5" width="311" height="276.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-5c-EeW">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="276.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3XJ-5c-EeW" firstAttribute="leading" secondItem="WBg-wo-pzz" secondAttribute="leading" id="3aR-kx-Bls"/>
+                                            <constraint firstAttribute="trailing" secondItem="3XJ-5c-EeW" secondAttribute="trailing" id="He6-Ex-yg4"/>
+                                            <constraint firstItem="3XJ-5c-EeW" firstAttribute="centerY" secondItem="WBg-wo-pzz" secondAttribute="centerY" id="Tcd-68-d2K"/>
+                                            <constraint firstItem="3XJ-5c-EeW" firstAttribute="centerY" secondItem="WBg-wo-pzz" secondAttribute="centerY" id="fTS-3b-5MM"/>
+                                            <constraint firstItem="3XJ-5c-EeW" firstAttribute="top" secondItem="WBg-wo-pzz" secondAttribute="top" id="gYp-eM-adc"/>
+                                            <constraint firstItem="3XJ-5c-EeW" firstAttribute="centerX" secondItem="WBg-wo-pzz" secondAttribute="centerX" id="h8p-8T-D5x"/>
+                                            <constraint firstItem="3XJ-5c-EeW" firstAttribute="centerX" secondItem="WBg-wo-pzz" secondAttribute="centerX" id="lGG-jD-wsF"/>
+                                            <constraint firstAttribute="bottom" secondItem="3XJ-5c-EeW" secondAttribute="bottom" id="wI2-MQ-c14"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-eM-VMf" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="555" width="414" height="276.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SG4-gN-z19">
+                                                <rect key="frame" x="158.5" y="102.5" width="97" height="72"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ask" buttonSize="large">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                                    <color key="baseForegroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7e-5E-GVK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SG4-gN-z19" firstAttribute="centerY" secondItem="GDe-eM-VMf" secondAttribute="centerY" id="7XN-qa-i4B"/>
+                                            <constraint firstItem="SG4-gN-z19" firstAttribute="centerX" secondItem="GDe-eM-VMf" secondAttribute="centerX" id="V30-9m-4Xm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GDe-eM-VMf" secondAttribute="trailing" id="Hcy-iT-npN"/>
+                                    <constraint firstAttribute="bottom" secondItem="GDe-eM-VMf" secondAttribute="bottom" id="QGi-YZ-r3e"/>
+                                    <constraint firstAttribute="trailing" secondItem="E7G-Zb-YRa" secondAttribute="trailing" id="WB4-d9-yUm"/>
+                                    <constraint firstItem="E7G-Zb-YRa" firstAttribute="top" secondItem="JU5-uD-mY0" secondAttribute="top" id="Yo7-DT-aei"/>
+                                    <constraint firstItem="E7G-Zb-YRa" firstAttribute="leading" secondItem="JU5-uD-mY0" secondAttribute="leading" id="dIm-5h-0ah"/>
+                                    <constraint firstItem="GDe-eM-VMf" firstAttribute="leading" secondItem="JU5-uD-mY0" secondAttribute="leading" id="pfu-R7-68P"/>
+                                    <constraint firstItem="E7G-Zb-YRa" firstAttribute="centerX" secondItem="JU5-uD-mY0" secondAttribute="centerX" id="uMG-CU-dj6"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.015686274509803921" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xpv-FP-pC7" secondAttribute="bottom" id="EDb-qn-lyp"/>
+                            <constraint firstItem="JU5-uD-mY0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HzK-4r-Bfu"/>
+                            <constraint firstItem="Xpv-FP-pC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LgA-9W-n8j"/>
+                            <constraint firstItem="Xpv-FP-pC7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="MCH-qD-R58"/>
+                            <constraint firstItem="JU5-uD-mY0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NHa-5x-yJb"/>
+                            <constraint firstItem="Xpv-FP-pC7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cKV-fe-56S"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JU5-uD-mY0" secondAttribute="bottom" constant="-13.5" id="fZg-Ar-Wnw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JU5-uD-mY0" secondAttribute="trailing" id="uMu-Jp-Gmm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3XJ-5c-EeW" id="Grh-D8-S7s"/>
